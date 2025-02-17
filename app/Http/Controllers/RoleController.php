@@ -44,7 +44,7 @@ class RoleController extends Controller implements HasMiddleware // Implement Mi
         $data = Permission::orderBy('name')->pluck('name', 'id');
         $collection = collect($data);
         $permissions = $collection->groupBy(function ($item, $key) {
-            // Memecah string menjadi array kata-kata
+            // Memecah string menjadi array kata-o
             $words = explode(' ', $item);
 
             // Mengambil kata pertama
